@@ -1,7 +1,7 @@
 {
-  "versionCode": 1,
-  "versionName": "1.0",
-  "apkUrl": "",
-  "changelog": "Initial release",
-  "forceUpdate": false
+  "versionCode": 2,
+  "versionName": "1.1",
+  "apkUrl": "https://github.com/123ihuman/omtube/releases/download/v1.1/app-debug.apk",
+  "changelog": "Bug fixes + new videos",
+  "forceUpdate": true
 }
