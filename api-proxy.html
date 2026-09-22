@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"></head>
+<body>
+<script>
+// This page acts as a proxy — Capacitor loads it, and it fetches the YouTube API
+const params = new URLSearchParams(window.location.search);
+const apiUrl = params.get('url');
+if (apiUrl) {
+    fetch(apiUrl)
+        .then(r => r.json())
+        .then(data => {
+            window.parent.postMessage({ type: 'api-response', data: data }, '*');
+        })
+        .catch(err => {
+            window.parent.postMessage({ type: 'api-error', error: err.message }, '*');
+        });
+}
+</script>
+</body>
+</html>
